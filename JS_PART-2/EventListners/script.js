@@ -3,8 +3,8 @@
 //event ka matlab hai action hua , eventListener ka matlaba hai apne us action ka reaction diya
 
 
-// ADDING EVENT LISTENER
 
+// ADDING EVENT LISTENER
 let h1= document.querySelector("h1");
 h1.addEventListener("mouseover" , function(){
     h1.style.color="red";
@@ -25,6 +25,7 @@ input.addEventListener("input" , function(evt){
 
 
 
+
 //REMOVING EVENT LISTENER
 let p= document.querySelector("p");
 
@@ -33,6 +34,25 @@ let a= function(){
 
 p.addEventListener("mouseover" , a ); //function ko variable me store karna zaruri hai taki usko remove kar sake
 p.removeEventListener("mouseover" , a );
+
+
+
+
+//EVENT BUBBLING and CAPTURING
+//jisme event ayega agar uspar listener nhi hua to humara event uske parent par lister dhundhega aur aisa krte krte uppar ki taraf move karega
+
+
+//isika ulta hota hai event capturing..
+//jab bhi aap click krte ho ya koi bhi event raise krte ho to apka event flow ya propogation do phases me chalta hai
+//phase-1 event top level element se neeche ki taraf ayega    ->capture phase
+//phase-2 event raise element se parent ki taraf jayega    ->bubbling phase
+//hamsha phase 1 hi pehle hoti hai but wo by default off hoti hai , agar hum use on kar dein to pehle phase one ka answer milega
+
+let btn=document.querySelector("button");
+btn.addEventListener("click" ,function(){
+    alert("clicked");
+} ,true)  //; here capture phase is enabled
+
 
 
 
