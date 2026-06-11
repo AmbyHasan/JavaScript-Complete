@@ -1,6 +1,6 @@
 //setTimeout
 
-let tm= setTimeout(function(){
+let tm= setTimeout(()=>{
  console.log("amber"); //5 sec bad se chal jayega
 } , 5000);
 
