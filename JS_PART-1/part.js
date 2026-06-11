@@ -30,3 +30,7 @@ console.log(typeof 123n);
 
 console.log(5!=='5'); //true -> because here we have strict checking
 console.log(5!='5'); //false -> becuse here we have loose checking, in loose checking js will convert the string '5' to number 5 and then compare, so it will be equal and return false. but in strict checking it will not convert and directly compare the values and types, so it will return true because 5 is a number and '5' is a string.
+
+console.log(!!3); //this is a trick to convert any value to boolean , it will give true
+let a=10;
+console.log(!!a); //it will also give true because a is a truthy value, any non zero number is a truthy value in js, so it will return true. if we have a=0 then it will return false because 0 is a falsy value in js.
