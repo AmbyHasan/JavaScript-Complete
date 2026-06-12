@@ -9,17 +9,36 @@ let h1= document.querySelector("h1");
 h1.addEventListener("mouseover" , function(){
     h1.style.color="red";
 })
+
+
+
 h1.addEventListener("mouseout" , function(){
     h1.style.color="yellow";
 })
+
 
 
 let input= document.querySelector("input");
 input.addEventListener("input" , function(evt){
     console.log(evt.data); //event object me key property hoti hai jisme press ki hui key ka name hota hai
 });
-
 //ek time pe ek character print hoga input ka
+
+
+
+//change event tab chalta hai kab koi input ,select ya textarea me koi change hojaye
+let sel=document.querySelector("select");
+let device= document.querySelector("#device");  //paragraph hai jo select ke uppar mentioned haii
+
+sel.addEventListener("change" , function(evt){  //this get triggerd jab bhi select me se koi option select hoga
+  device.textContent= `${evt.target.value} is selected`   //changing the paragrapth content
+});
+
+let btn=document.querySelector("button");
+btn.addEventListener("click" , function(){
+    alert("Button is clicked");
+});
+
 
 //similarly we have "dblclick" for double click , "mouseover" for mouse hover , "mouseout" for mouse leave , "keydown" for key press and many more events are there
 
@@ -52,6 +71,10 @@ let btn=document.querySelector("button");
 btn.addEventListener("click" ,function(){
     alert("clicked");
 } ,true)  //; here capture phase is enabled
+
+
+
+
 
 
 
