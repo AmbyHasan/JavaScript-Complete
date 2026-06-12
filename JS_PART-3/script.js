@@ -56,3 +56,15 @@ f2(); //1
 f2(); //2           
 f2(); //3
 //f1 and f2 dono alag alag closure hai aur dono ke apne apne count variable hai
+
+
+
+//Encapsulation->
+//encapsulation ka matlab hai ki aap apne data ko private rakhna chahte ho aur usko access karne ke liye aapko ek public method provide karna hota hai
+
+
+
+//synchronors -> aisa code jo line by line execute hota hai usko synchronors code kehte hai
+//asynchronors -> aisa code jo line by line execute nahi hota hai usko asynchronors code kehte hai
+//js me asynchronors code ko handle karne ke liye hum promises ka use karte hai
+
