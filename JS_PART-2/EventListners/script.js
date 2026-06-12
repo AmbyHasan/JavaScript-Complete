@@ -31,7 +31,7 @@ let sel=document.querySelector("select");
 let device= document.querySelector("#device");  //paragraph hai jo select ke uppar mentioned haii
 
 sel.addEventListener("change" , function(evt){  //this get triggerd jab bhi select me se koi option select hoga
-  device.textContent= `${evt.target.value} is selected`   //changing the paragrapth content
+  device.textContent = `${evt.target.value} is selected`   //changing the paragrapth content
 });
 
 let btn=document.querySelector("button");
@@ -67,8 +67,8 @@ p.removeEventListener("mouseover" , a );
 //phase-2 event raise element se parent ki taraf jayega    ->bubbling phase
 //hamsha phase 1 hi pehle hoti hai but wo by default off hoti hai , agar hum use on kar dein to pehle phase one ka answer milega
 
-let btn=document.querySelector("button");
-btn.addEventListener("click" ,function(){
+let btn2=document.querySelector("#btn2");
+btn2.addEventListener("click" ,function(){
     alert("clicked");
 } ,true)  //; here capture phase is enabled
 
